@@ -13,6 +13,11 @@
             padding: 0;
             background-color: #f8f8f8;
         }
+        .container {
+            max-width: 1400px;  /* Increased from 1200px */
+            margin: 0 auto;
+            padding: 0 40px;    /* Increased from 15px */
+        }
         .header {
             background-color: #336699;
             color: white;
@@ -21,9 +26,9 @@
         .header-inner {
             display: flex;
             align-items: center;
-            max-width: 1200px;
+            padding: 0 40px;    /* Added padding */
+            max-width: 1400px;  /* Increased from 1200px */
             margin: 0 auto;
-            padding: 0 15px;
         }
         .logo {
             font-size: 24px;
@@ -46,9 +51,9 @@
             border-bottom: 1px solid #ddd;
         }
         .search-inner {
-            max-width: 1200px;
+            max-width: 1400px;  /* Increased from 1200px */
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 40px;    /* Increased from 15px */
             display: flex;
             align-items: center;
         }
@@ -76,9 +81,9 @@
             cursor: pointer;
         }
         .main-content {
-            max-width: 1200px;
+            max-width: 1400px;  /* Increased from 1200px */
             margin: 0 auto;
-            padding: 20px 15px;
+            padding: 30px 40px;  /* Increased from 20px 15px */
             background-color: white;
             box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
@@ -122,6 +127,7 @@
         }
         .tab-content {
             margin-bottom: 30px;
+            margin-right: 340px; /* Added to account for side panel */
         }
         .section-title {
             font-weight: bold;
@@ -144,7 +150,7 @@
         }
         .side-panel {
             float: right;
-            width: 300px;
+            width: 320px;         /* Increased from 300px */
             margin-left: 20px;
             background-color: #f9f9f9;
             padding: 15px;
@@ -192,7 +198,7 @@
         }
         footer {
             background-color: #e6e6e6;
-            padding: 20px;
+            padding: 30px 40px;    /* Increased from 20px */
             text-align: center;
             font-size: 13px;
             color: #666;
@@ -206,6 +212,28 @@
             border-radius: 4px;
             border: 1px solid #ffeeba;
             font-weight: bold;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .main-content, .header-inner, .search-inner {
+                padding: 0 30px;
+            }
+            .main-content {
+                padding: 20px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .side-panel {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            .tab-content {
+                margin-right: 0;
+            }
         }
     </style>
 </head>
@@ -236,7 +264,8 @@
             </div>
         </div>
     </div>
-        
+    
+    <div class="main-content">
         <div class="side-panel">
             <h3>Similar Articles</h3>
             <ul>
